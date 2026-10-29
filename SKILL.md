@@ -35,6 +35,7 @@ Xholic is the part of the user's AI that knows X, and knows them on X: it sees X
 7. **Replies go out from X, not Xholic.** X lets apps reply to other people's posts only on enterprise API plans, so never try to post one. Give each reply as a link that opens X with it ready: `https://x.com/intent/tweet?in_reply_to=<post id>&text=<URL-encoded reply>`. With several replies, tell the user to post them a few minutes apart, not in one burst: X can limit accounts that reply too fast. X watches small and new accounts most closely, so if the account is small (`xholic me get` shows its followers) or new, say so gently and suggest fewer replies, spaced further apart.
 8. Billing, connecting X accounts, sharing and security settings are app-only: send the user to app.xholic.ai for those.
 9. **Ask for access, don't work around it.** Connections start without Publish. A `SCOPE_MISSING` error carries a link (`error.details.allowUrl`): give it to the user, and retry only after they say they allowed it. Never try another route to the same result.
+10. **Keep Xholic current.** When an `xholic` command prints "A new version of xholic is available", run `npm i -g xholic@latest` and `npx skills update xholic-agent -g -y`, tell the user in one line what you updated, then carry on. New commands and rules arrive with each version.
 
 ## Recipes
 
