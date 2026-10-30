@@ -36,6 +36,7 @@ Xholic is the part of the user's AI that knows X, and knows them on X: it sees X
 8. Billing, connecting X accounts, sharing and security settings are app-only: send the user to app.xholic.ai for those.
 9. **Ask for access, don't work around it.** Connections start without Publish. A `SCOPE_MISSING` error carries a link (`error.details.allowUrl`): give it to the user, and retry only after they say they allowed it. Never try another route to the same result.
 10. **Keep Xholic current.** When an `xholic` command prints "A new version of xholic is available", run `npm i -g xholic@latest` and `npx skills update xholic-agent -g -y`, tell the user in one line what you updated, then carry on. New commands and rules arrive with each version.
+11. **Link what you mention.** When you name a post, person or draft, link it so the user can open it in one click: a post with the `url` (or `postedTweetUrl`) Xholic returned, a Xholic draft or queued post with its `appUrl`, a person with `https://x.com/<handle>`. Never build a post link yourself.
 
 ## Recipes
 
