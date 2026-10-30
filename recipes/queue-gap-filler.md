@@ -19,13 +19,17 @@ Use for filling empty queue slots with drafts. Not for checking the next post's 
    xholic scheduler list-slots
    ```
 3. If they have no slots, ask how often they want to post.
-4. Get material in the user's voice (proven posts, their winners, saves).
+4. Check what the user's Workers already wrote: ready-made drafts, free to use.
+   ```sh
+   xholic workers drafts
+   ```
+5. Get material in the user's voice (proven posts, their winners, saves).
    ```sh
    xholic context writing-kit --topic "<subject per gap>"
    ```
-5. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
-6. Check every draft before showing it; fix what it flags.
+6. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
+7. Check every draft before showing it; fix what it flags.
    ```sh
    xholic drafts check --text "<post>" --source-text "<post it was built from>"
    ```
-7. Show a post per open slot; schedule each only after the user approves it.
+8. Show a post per open slot; schedule each only after the user approves it.

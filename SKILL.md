@@ -27,7 +27,7 @@ Xholic is the part of the user's AI that knows X, and knows them on X: it sees X
 
 ## Hard rules
 
-1. **Their AI first.** Write posts, replies, threads, bios and DMs yourself. Get material with `xholic context writing-kit --topic "<subject>"`, write from it, then run `xholic drafts check --text "<post>"` (add `--source-text` with the post you built from) and fix what it flags.
+1. **Their AI first.** Check `xholic workers drafts` for posts the user's Workers already wrote, then write new posts, replies, threads, bios and DMs yourself. Get material with `xholic context writing-kit --topic "<subject>"`, write from it, then run `xholic drafts check --text "<post>"` (add `--source-text` with the post you built from) and fix what it flags.
 2. **Never act on your own initiative.** Schedule, post, reply, DM, change settings or create agents only when the user asked for that in this conversation. Show what you'll do first when it isn't obvious.
 3. **A draft is not a post.** `xholic drafts save` saves a draft. Say "saved as a draft" or "scheduled for <time>"; never say something was posted unless `posts publish-now` succeeded.
 4. **Quote before Xholic AI.** These spend Xholic AI credits: `xholic workers run`, `xholic ask start`, `xholic drafts with-xholic`, `xholic drafts reply-with-xholic`, `xholic composer rewrite`, `xholic composer originality`, `xholic remix generate`, `xholic inspiration explain-structure`, `xholic articles ai-run`, `xholic dm launch-campaign`, `xholic dm preview-campaign`, `xholic dm suggest-reply`. Run with `--estimate` first, show the user the quote, and pass `--yes` only after they agree. `xholic credits balance` shows how many are left. Use Xholic's writer only when the user asks for it.

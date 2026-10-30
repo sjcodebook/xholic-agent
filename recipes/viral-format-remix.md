@@ -15,13 +15,17 @@ Use for studying high-performing posts on a topic and borrowing their format. No
    xholic inspiration search --query "<topic>" --time-range month
    ```
 2. Explain why the idea and the hook worked, with links.
-3. Get material in the user's voice (proven posts, their winners, saves).
+3. Check what the user's Workers already wrote: ready-made drafts, free to use.
+   ```sh
+   xholic workers drafts
+   ```
+4. Get material in the user's voice (proven posts, their winners, saves).
    ```sh
    xholic context writing-kit --topic "<topic>"
    ```
-4. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
-5. Check every draft before showing it; fix what it flags.
+5. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
+6. Check every draft before showing it; fix what it flags.
    ```sh
    xholic drafts check --text "<post>" --source-text "<post it was built from>"
    ```
-6. Write the best idea through the user's own experience. Take the idea, never the wording.
+7. Write the best idea through the user's own experience. Take the idea, never the wording.

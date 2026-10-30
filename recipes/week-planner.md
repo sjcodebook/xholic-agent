@@ -22,16 +22,20 @@ Use for a week or more of posts planned day by day. Not for today's ideas or one
    ```sh
    xholic scheduler best-times --slot-count 7
    ```
-4. Get material in the user's voice (proven posts, their winners, saves).
+4. Check what the user's Workers already wrote: ready-made drafts, free to use.
+   ```sh
+   xholic workers drafts
+   ```
+5. Get material in the user's voice (proven posts, their winners, saves).
    ```sh
    xholic context writing-kit --topic "<each day's subject>"
    ```
-5. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
-6. Check every draft before showing it; fix what it flags.
+6. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
+7. Check every draft before showing it; fix what it flags.
    ```sh
    xholic drafts check --text "<post>" --source-text "<post it was built from>"
    ```
-7. Show one post per day, titled with the day. Ask before scheduling anything; then schedule each approved post with its own idempotency key.
+8. Show one post per day, titled with the day. Ask before scheduling anything; then schedule each approved post with its own idempotency key.
    ```sh
    xholic posts schedule --text "<post>" --scheduled-at <day>T09:00 --timezone <tz> --idempotency-key <unique>
    ```

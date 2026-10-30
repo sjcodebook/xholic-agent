@@ -19,12 +19,16 @@ Use when they want to post about what's trending now in their niche. Not for a g
    xholic x search --query "<topic>" --sort Top
    ```
 3. If you can't tell their niche, ask for two or three topic phrases.
-4. Get material in the user's voice (proven posts, their winners, saves).
+4. Check what the user's Workers already wrote: ready-made drafts, free to use.
+   ```sh
+   xholic workers drafts
+   ```
+5. Get material in the user's voice (proven posts, their winners, saves).
    ```sh
    xholic context writing-kit --topic "<trend>"
    ```
-5. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
-6. Check every draft before showing it; fix what it flags.
+6. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
+7. Check every draft before showing it; fix what it flags.
    ```sh
    xholic drafts check --text "<post>" --source-text "<post it was built from>"
    ```

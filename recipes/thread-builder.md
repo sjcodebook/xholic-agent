@@ -10,17 +10,21 @@ Use when they want a thread from an idea, notes or a draft. Not for a single pos
 
 ## Steps
 
-1. Get material in the user's voice (proven posts, their winners, saves).
+1. Check what the user's Workers already wrote: ready-made drafts, free to use.
+   ```sh
+   xholic workers drafts
+   ```
+2. Get material in the user's voice (proven posts, their winners, saves).
    ```sh
    xholic context writing-kit --topic "<the idea>"
    ```
-2. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
-3. Check every draft before showing it; fix what it flags.
+3. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
+4. Check every draft before showing it; fix what it flags.
    ```sh
    xholic drafts check --text "<post>" --source-text "<post it was built from>"
    ```
-4. Check the whole thread.
+5. Check the whole thread.
    ```sh
    xholic drafts check --text "<part 1>" --thread-parts "<part 1>" --thread-parts "<part 2>"
    ```
-5. Only when asked: `xholic drafts save --text "<part 1>" --thread-parts ...` or `xholic posts schedule` with the same parts.
+6. Only when asked: `xholic drafts save --text "<part 1>" --thread-parts ...` or `xholic posts schedule` with the same parts.

@@ -15,14 +15,18 @@ Use for announcing a product, feature or launch. Not for everyday posts that men
    xholic context products
    ```
 2. If none are saved, ask what it does and who it's for.
-3. Get material in the user's voice (proven posts, their winners, saves).
+3. Check what the user's Workers already wrote: ready-made drafts, free to use.
+   ```sh
+   xholic workers drafts
+   ```
+4. Get material in the user's voice (proven posts, their winners, saves).
    ```sh
    xholic context writing-kit --topic "<product or feature>"
    ```
-4. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
-5. Check every draft before showing it; fix what it flags.
+5. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
+6. Check every draft before showing it; fix what it flags.
    ```sh
    xholic drafts check --text "<post>" --source-text "<post it was built from>"
    ```
-6. Use only facts from the product context; no links in the post.
-7. Only when the user says so: save it as a draft (`xholic drafts save --text ...`) or schedule it (`xholic posts schedule --text ... --scheduled-at 2026-11-03T09:00 --timezone <their tz> --idempotency-key <unique>`). A draft is not a post.
+7. Use only facts from the product context; no links in the post.
+8. Only when the user says so: save it as a draft (`xholic drafts save --text ...`) or schedule it (`xholic posts schedule --text ... --scheduled-at 2026-11-03T09:00 --timezone <their tz> --idempotency-key <unique>`). A draft is not a post.

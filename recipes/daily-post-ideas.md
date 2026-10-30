@@ -18,14 +18,18 @@ Use when they want several post ideas or don't know what to post today. Not for 
    ```sh
    xholic niche now --kind proven --limit 10
    ```
-3. Get material in the user's voice (proven posts, their winners, saves).
+3. Check what the user's Workers already wrote: ready-made drafts, free to use.
+   ```sh
+   xholic workers drafts
+   ```
+4. Get material in the user's voice (proven posts, their winners, saves).
    ```sh
    xholic context writing-kit --topic "<subject of each pick>"
    ```
-4. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
-5. Check every draft before showing it; fix what it flags.
+5. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
+6. Check every draft before showing it; fix what it flags.
    ```sh
    xholic drafts check --text "<post>" --source-text "<post it was built from>"
    ```
-6. Offer three ideas, each from a different real post.
-7. Only when the user says so: save it as a draft (`xholic drafts save --text ...`) or schedule it (`xholic posts schedule --text ... --scheduled-at 2026-11-03T09:00 --timezone <their tz> --idempotency-key <unique>`). A draft is not a post.
+7. Offer three ideas, each from a different real post.
+8. Only when the user says so: save it as a draft (`xholic drafts save --text ...`) or schedule it (`xholic posts schedule --text ... --scheduled-at 2026-11-03T09:00 --timezone <their tz> --idempotency-key <unique>`). A draft is not a post.
