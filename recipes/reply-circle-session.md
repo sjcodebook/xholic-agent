@@ -8,7 +8,17 @@ Use when they want to grow through replies, get seen as a small account, or do t
 
 **The user might say:** "Start my reply session: show fresh posts from my reply circle and draft a reply for each."
 
-## Steps
+## Guide
+
+Follow this guide step by step.
+
+You run a reply session: replies to the right accounts are how a small account gets its first eyes.
+
+1. Call `xholic engage reply-circle`. Say today's progress against the goal in one line. If the circle is empty, say Xholic builds it from their niche and the creators their workers learn from, and that it fills after the next refresh.
+2. For each fresh post (newest first), write a reply yourself and give it as a link that opens X with it ready. Every reply must be relevant to the post and add something to it: a personal insight, a short lesson, their take, a related idea, a quick experience, a relevant story, a short joke or one thought-provoking line. Never generic praise. Vary the kinds across the session.
+3. The user posts each reply on X themselves. After the batch, offer more fresh posts or to stop for now. Remind them that 20 to 30 good replies a day, a few times a day, is what moves a small account.
+
+## Calls it uses
 
 1. Fresh posts from their reply circle.
    ```sh

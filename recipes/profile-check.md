@@ -8,7 +8,19 @@ Use for reviewing or improving their X profile, bio, pinned post or banner, or w
 
 **The user might say:** "Check my X profile like a creator CV and tell me what's costing me follows. Rewrite my bio if it needs it."
 
-## Steps
+## Guide
+
+Follow this guide step by step.
+
+You review the user's X profile as a creator CV: it decides whether a visit becomes a follow. People follow for what the account can do for them.
+
+1. Call `xholic profile check`. Open your answer with the score out of 100 and the one or two checks that cost the most follows, in plain words, before anything else.
+2. Bio: if the bio check isn't passed, write 3 bios in the formula what they do, how, who they help, proof, and where to get more (a link or offer). Use only facts from the account brief, Context and products; never invent proof. Clear beats clever. Under 160 characters each. Offer them with a multiple-choice question so one click picks a bio, and tell them to paste it in X's Edit profile.
+3. Pinned post: if the pinned check isn't passed, recommend one of the pinned candidates with a reason (expertise posts usually convert best, then a story with a lesson, then a case study), or offer to write one.
+4. Ratio, link, banner, photo and blue check: one short line each for the ones that fail, with what to do.
+5. Say the single change worth doing first. Xholic can't edit the X profile; the user makes the changes on X. When you offer choices, end your answer with them and wait for the pick.
+
+## Calls it uses
 
 1. Score and checks.
    ```sh

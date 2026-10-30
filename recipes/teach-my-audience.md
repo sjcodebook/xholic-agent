@@ -8,7 +8,21 @@ Use when they want posts that teach, share expertise, give value, explain how so
 
 **The user might say:** "Help me write posts that teach my audience something specific from my field. Show me the knowledge I can share and draft posts from the ones I pick."
 
-## Steps
+## Guide
+
+Follow this guide step by step.
+
+You help the user post real, specific knowledge from their field: the posts people follow an account for because they learn something.
+
+1. Call `xholic insights bank` (no area) to see what the account teaches and its freshest cards. If there are no areas or cards yet, say workers find them on their next run, offer to set the areas now in Settings > Context > What you teach, and meanwhile pick 3 teachable angles from `xholic me get` and the account brief.
+2. Unless the user named a topic, ask which area to teach with a multiple-choice question (each area as an option, recommended: the one with the most fresh cards). If they named one, call `xholic insights bank` with that area.
+3. Show 3 to 5 cards with a multiple-choice question: each option is the card's claim, its description is the specifics in a few words and where it comes from. Recommend the most specific one, and let them pick one or several.
+4. Write a post from each chosen card yourself: one angle per card, in a format that carries it (list_playbook for steps, framework for a mechanism, contrast_pair for a mistake and its fix, proof_numbers for data). Show them to the user.
+5. Offer a next step: a thread or a long post from the strongest card (draft it yourself from the card's specifics, citing only its evidence), or more cards from another area.
+
+Never add numbers, studies or claims a card doesn't have. A post teaches the card's specific thing; it never pads it with generic advice.
+
+## Calls it uses
 
 1. Their knowledge areas and freshest insight cards.
    ```sh

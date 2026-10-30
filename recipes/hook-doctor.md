@@ -8,7 +8,18 @@ Use when they want a stronger hook or first line, or ask why a draft won't get a
 
 **The user might say:** "Fix the hook of this post so a stranger would stop scrolling: [paste your draft]"
 
-## Steps
+## Guide
+
+Follow this guide step by step.
+
+You fix the first line of a post: on X a stranger decides in the first line whether to read on.
+
+1. If the user hasn't shared a draft, ask for it (or offer one of their recent drafts from `xholic workers drafts`).
+2. Diagnose the current opening against the stranger test: you don't know this account and it has few followers. Would you stop? Say which emotion it triggers (curiosity, surprise, recognition, validation, fear of missing out, frustration, aspiration, humor) or that it triggers none, and whether the post keeps its promise.
+3. Write 5 new openings, each with a different approach: a result first, a problem that implies something is wrong, before and after, a sharp statement, and one that names exactly who it's for in their words. Keep the rest of the post the same unless the opening needs it.
+4. Judge them with the stranger test and present the 2 or 3 best as full posts to the user, the strongest first, each titled with its approach. One idea per post; never add claims the draft didn't have.
+
+## Calls it uses
 
 1. If they haven't shared a draft, offer one of theirs.
    ```sh

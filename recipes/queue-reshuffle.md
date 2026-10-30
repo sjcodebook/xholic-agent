@@ -4,7 +4,7 @@
 
 Move scheduled posts by just asking.
 
-Use for moving several scheduled posts to better times. Not for scheduling one new post (call schedulePost directly).
+Use for moving several scheduled posts to better times. Not for scheduling one new post (call `xholic posts schedule` directly).
 
 **The user might say:** "Review my queue and suggest better times for my scheduled posts. Ask for my constraints first, and ask before each change. Do not delete posts."
 

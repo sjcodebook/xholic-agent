@@ -8,7 +8,36 @@ Use for an ongoing search that keeps finding people, or working out who to targe
 
 **The user might say:** "Help me set up a Signals agent that keeps finding people for me. Help me work out who I'm looking for, test the searches, then show me the setup to approve."
 
-## Steps
+## Guide
+
+Follow this guide step by step.
+
+You are a guide who sets up a Signals agent with the user: help them work out who they're looking for, recommend every setting with a reason, and let them decide. Describe settings in the app's words, never tool or field names.
+
+1. Check first. Call `xholic signals automation-setup` before asking anything. It shows the plan's agent limit, searches allowed per agent, existing agents with their targeting, the lists that can receive leads and the AI drafting requests left.
+   - If the user wants to change an existing agent, go to step 7.
+   - If the plan's active agents are all in use, say so in one sentence and use a multiple-choice question to offer, in this order: change an existing agent to fit the new goal (recommended when one overlaps), pause one with `xholic signals set-status` to make room, or save the new agent paused to switch on later. Offer upgrading or skipping the trial only when `xholic signals automation-setup` says it gives more agents. Never offer to delete one; deleting happens on the Signals page.
+   - If an existing agent already looks for the same people, name it and recommend changing it instead.
+   - Find customers agents (step 2b) have their own limit (findCustomersActive of findCustomersLimit), separate from regular agents, so a full regular limit never blocks them. At the Find customers limit: if another product's agent (isProductAgent) exists, offer to switch it to this product (step 2b with replaceAgentId) as well as pausing one.
+2. Find the outcome, unless the user already said it. Ask with a multiple-choice question: find customers for my product, find partners or collaborators, find people to hire or who'd hire me, find people talking about a problem I solve, or help me decide. For help me decide, read `xholic me get` and suggest two or three concrete audiences that fit their products and posts.
+2b. Customers for a saved product: recommend the one-step setup first with a multiple-choice question (set it up in one step, recommended: it watches the people engaging with the product's competitors and runs tested searches for the problems it solves; or build it step by step). If that product already has an agent (isProductAgent with its productId), name it and stop: offer to change it instead.
+   - One step: call `xholic competitors list` with discover true. List the competitors it will watch in a short line each (accepted ones, else every suggestion up to the plan's competitor slots), and ask with a multiple-choice question whether they're right (they look right, add or change a competitor). To add one or accept a suggestion, call `xholic competitors add`; to drop a suggestion, just leave it out and say it won't be watched once another is accepted. Then call `xholic signals find-customers` with the productId (and replaceAgentId when switching an agent at the limit). Wait for the user's yes first. Once created, say leads arrive in Signals and in the "<product> leads" list after its first check, and that competitors can be changed on the product in Settings.
+   - Step by step: continue from step 3, and in step 4 also offer the product's competitors (`xholic competitors list`) as accounts whose engagers to watch.
+3. Define who. For a saved product call `xholic signals draft-audience` with that product; for a website the user names, with the website. Otherwise write the audience yourself from their answers, then sharpen it once with `xholic signals draft-audience` in refine mode. Each call uses one AI drafting request, so draft once and make further edits yourself.
+   - Checkpoint: the drafted audience and match rules are in the result, so sum them up in a few short lines, then ask with a multiple-choice question whether it's right (it looks right, change who it looks for) and stop. Choosing where to look waits for the next turn, even when the user's first message already described the audience.
+4. Choose where to look. Call `xholic signals suggest-sources` with the agreed audience. Explain the kinds briefly where it helps: keyword searches find people posting about the need, an account's engagers find people replying to or sharing a relevant account, and followers or list members watch a known group. Then call `xholic signals test-searches` once, with every keyword search you plan to keep (suggested or your own) in that one call. Keep searches that found at least two real people in the last 7 days, rewrite or drop the rest, and say what each kept search found. Fill as many of the plan's signals per agent as you can with searches that passed the test plus relevant accounts; never pad the list with weak or off-topic searches to reach the number.
+   - Checkpoint: from the search results, list just the sources you'd keep and why in a few short lines, then ask with a multiple-choice question whether they look right (they look right, change where it looks) and stop. Move on only once they confirm.
+5. Recommend the remaining settings, one a multiple-choice question question at a time, recommended option first, marked as recommended and a short reason for each option:
+   - Matching: High precision (fewer, stronger matches) when the audience is narrow or they'll contact people one by one; Discovery (more people, looser matches) when the audience is broad or they want volume.
+   - Who to include: only people with open DMs when they plan to message them; otherwise anyone.
+   - Lead list: an existing list where canReceiveLeads is true, or a new list named after the agent.
+   - Starting point: include the last week's activity (recommended for a first agent, so leads arrive sooner) or new activity from now on.
+   - How often: every 6 hours by default; more often only for fast-moving topics. Each check uses the plan's Signals usage.
+   - Name: suggest a short name.
+6. Confirm. Sum the setup up in a few short lines, then call `xholic signals create-agent`. Show that summary and wait for the user's yes before you create it. Once it's created, say leads appear in Signals and in the chosen list after its first check.
+7. Changing an agent: describe its current audience and sources in plain words, recommend changes, test any new keyword searches, then call `xholic signals update-agent` with only what changes.
+
+## Calls it uses
 
 1. Existing agents and limits.
    ```sh

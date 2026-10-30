@@ -8,7 +8,28 @@ Use for setting up a new worker or rethinking one: posting on autopilot, drafts 
 
 **The user might say:** "Help me create a worker that drafts posts for me. Ask what I'm trying to achieve, recommend each setting, then show me the setup to approve."
 
-## Steps
+## Guide
+
+Follow this guide step by step.
+
+You are a guide who builds a worker with the user: ask what they want, recommend every setting with a reason, and let them decide. Describe settings in the app's words, never tool or field names.
+
+1. Check first. Call `xholic signals automation-setup` before asking anything. It shows the plan's worker limit, the workers that already exist with their settings, AI credits left and the cost per post.
+   - If the user wants to change an existing worker, go to step 6.
+   - If the plan's active workers are all in use, say so in one sentence and use a multiple-choice question to offer, in this order: change an existing worker to fit the new goal (recommended when one overlaps), pause one with `xholic workers set-status` to make room, or save the new worker paused to switch on later. Offer upgrading or skipping the trial only when `xholic signals automation-setup` says it gives more workers. Never offer to delete one; deleting happens on the Workers page.
+   - If an existing worker already covers the goal, name it and recommend changing it instead of creating a near-copy.
+2. Find the goal, unless the user already said it. Ask with a multiple-choice question: grow my audience, promote my product, build authority on a topic, ride what's trending in my niche, or help me decide. For help me decide, read `xholic me get` and `xholic insights whats-working`, suggest two or three concrete worker ideas with one line each on why they fit this account, and let the user pick.
+3. Recommend each setting, one question at a time. In every multiple-choice question put your recommended option first, marked as recommended, and give each option a short reason. Make recommendations specific to this account from the brief and tools; never ask for something you can look up. Skip a question when the conversation already answers it.
+   - Topic: grow audience → For you (topics from their profile). Promote a product → Your products, picking from the saved products; with none saved, say so and suggest a custom topic or adding the product on the Products page. Authority → Custom topic, written by you from their answer. Trending → Niche trending, with one to five keywords you suggest from their niche.
+   - Voice: My voice when the account already has a clear style (plenty of original posts in `xholic insights whats-working`). Otherwise Hybrid: their voice with the rhythm of one creator; one style stays recognizable, while blends turn bland. Call `xholic workers find-creators` without a query for the best-fit creators (their own picks first, then who they reply to most), recommend one with a reason drawn from their sample posts, and let the user name others (look those up with a query). Offer the creators with a multiple-choice question, one recommended, plus a last option for just their own voice. Add a second or third creator only when the user asks for it. Creator style alone only when the user asks to sound like someone.
+   - Instructions: write a short brief that sets broad boundaries and leaves the ideas to the writer: who it's for, who speaks, how they like to write (tone, how posts open, humor, read from their posts; a range rather than one length or one format: "short takes and long, list-heavy posts people save" when their posts or saves show it), the two to four broad areas they usually write in followed by "anything nearby that this audience would value is fair game", when to mention their product, and only real hard bans the user gave. Never write a thesis, a point of view the posts should push, a recurring contrast or argument ("the easy part vs the hard part"), a fixed list size ("lists of three") or a length limit the user didn't ask for, or a list of topics or posts to cover; the writer reads stances and ideas from their own posts. Workers never put links in posts, so never ask for them. Put a direction the user asked for in their words. Show the brief and ask if anything should change. `xholic workers find-creators` also says what kind of account this is (a person, a company or product page, or a topic page) and how its brief must speak: follow that voice rule exactly. A company page speaks as the brand ("we"), never as one person.
+   - Posts per run and schedule: 8, 12 or 24 posts per run, each costing the credits `xholic signals automation-setup` reports. Recommend a count from how often they post and their credits left, and give the cost per run and per month, such as "8 posts weekly is about 320 credits a month of your 1,000". Recommend On demand, Daily or Weekly with a day and time, based on when their posts do best in `xholic insights whats-working`.
+   - Name: suggest a short name that says what it does; for a company page, name it for the brand ("Posts for <brand>").
+4. Confirm. Sum the setup up in a few short lines, then call `xholic workers create` with every setting. Show that summary and wait for the user's yes before you create it.
+5. Once it's created, say it's on the Workers page and only writes drafts for review, then offer one next step: run it now (call `xholic workers run` if they say yes), or wait for its schedule.
+6. Changing a worker: describe its current settings in plain words, ask what should change or recommend changes for the new goal, then call `xholic workers update` with only the settings that change.
+
+## Calls it uses
 
 1. Existing Workers, limits and credits.
    ```sh

@@ -4,7 +4,7 @@
 
 Set standing rules for your AI drafts.
 
-Use for writing a set of writing rules together. Not for adding one rule they already wrote (call updateAccountContext), or saving or forgetting a memory (rememberFact, forgetFact).
+Use for writing a set of writing rules together. Not for adding one rule they already wrote (call `xholic context update`), or saving or forgetting a memory (`xholic memory remember`, `xholic memory forget`).
 
 **The user might say:** "Help me write short, clear rules for how my drafts should sound, then propose saving them to my account rules so I can approve them."
 

@@ -55,7 +55,7 @@ One recipe per job. Open the one that matches the request and follow its steps.
 - [Product Launch Post](recipes/product-launch-post.md): Use for announcing a product, feature or launch. Not for everyday posts that mention the product.
 - [Queue Gap Filler](recipes/queue-gap-filler.md): Use for filling empty queue slots with drafts. Not for checking the next post's time, or moving posts.
 - [Viral Format Remix](recipes/viral-format-remix.md): Use for studying high-performing posts on a topic and borrowing their format. Not for a plain search of posts.
-- [Queue Reshuffle](recipes/queue-reshuffle.md): Use for moving several scheduled posts to better times. Not for scheduling one new post (call schedulePost directly).
+- [Queue Reshuffle](recipes/queue-reshuffle.md): Use for moving several scheduled posts to better times. Not for scheduling one new post (call `xholic posts schedule` directly).
 - [Reply Sprint](recipes/reply-sprint.md): Use for answering the replies and mentions waiting on their posts. Not for one reply to a post they link.
 - [Reply to Any Post](recipes/reply-writer.md): Use when they link or paste someone's post and want a reply written. Not for a quick thank-you to a named person (write it directly).
 - [My Replies Report](recipes/my-replies-report.md): Use for analysing how their replies perform. Not for writing replies.
@@ -73,7 +73,7 @@ One recipe per job. Open the one that matches the request and follow its steps.
 - [My Content Export](recipes/content-export.md): Use for a CSV of their own posts and numbers. Not for analysing them.
 - [Post Post-Mortem](recipes/post-post-mortem.md): Use for explaining why one specific post did well or badly. Not for finding their best post.
 - [Top Performers Breakdown](recipes/top-performers.md): Use for the pattern across their best posts. Not for naming their single top post (answer directly).
-- [Teach Xholic Your Rules](recipes/teach-xholic-your-rules.md): Use for writing a set of writing rules together. Not for adding one rule they already wrote (call updateAccountContext), or saving or forgetting a memory (rememberFact, forgetFact).
+- [Teach Xholic Your Rules](recipes/teach-xholic-your-rules.md): Use for writing a set of writing rules together. Not for adding one rule they already wrote (call `xholic context update`), or saving or forgetting a memory (`xholic memory remember`, `xholic memory forget`).
 - [Product Positioning Audit](recipes/product-positioning-audit.md): Use for reviewing how their product is described. Not for writing about the product.
 - [Teach My Audience](recipes/teach-my-audience.md): Use when they want posts that teach, share expertise, give value, explain how something works in their field, or ask what they could teach. Not for general post ideas without a teaching angle (daily-post-ideas) or for rewriting their text.
 - [Profile Check](recipes/profile-check.md): Use for reviewing or improving their X profile, bio, pinned post or banner, or when visits don't turn into follows. Not for researching someone else's profile (who-is-this-person).

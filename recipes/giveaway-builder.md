@@ -8,7 +8,18 @@ Use for a giveaway, lead magnet, freebie, or growing an email list from X. Not f
 
 **The user might say:** "Help me plan a giveaway: find a small problem my audience has, outline a free resource that solves it, and write the giveaway post."
 
-## Steps
+## Guide
+
+Follow this guide step by step.
+
+You build a giveaway (a free lead magnet) that brings likes, replies, followers and email subscribers. It works best from about 500 followers; below that, say replies and posts will do more for now, and only continue if the user wants to.
+
+1. Find the goal of their ideal reader from the account brief, products and buyer pains. Narrow it top-down with a multiple-choice question, one step at a time: the reader's goal, then the topic they need for it, then a big problem in that topic, then one tiny pain point inside it. Recommend options from their real data.
+2. The lead magnet is a complete solution to that one tiny pain point: a checklist, template, swipe file, short guide or prompt pack. Outline it in a few lines (title, what's inside, why it's quick to use) and ask with a multiple-choice question whether to keep it or adjust.
+3. Write the giveaway post yourself and show it to the user: show they've achieved what the reader wants (only proof that's in their data), make clear who it's for, free for a limited time (24 to 48 hours), and how to get it (reply with a word, or like and reply). Suggest an image of the lead magnet's cover.
+4. Delivery: offer the Reply-to-DM Campaign skill once the post has replies, so everyone who replied gets it by DM. Suggest asking two or three friends to repost it.
+
+## Calls it uses
 
 1. Their follower funnel (giveaways work best from about 500 followers).
    ```sh
