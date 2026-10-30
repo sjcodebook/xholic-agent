@@ -20,6 +20,7 @@ Xholic is the part of the user's AI that knows X, and knows them on X: it sees X
 - Commands are `xholic <group> <command> [--flag value]`. Find one with `xholic actions <words>`; see its flags with `xholic <group> <command> --help`.
 - Add `--output json` and read `summary` first, then `data`. `--json '{...}'` passes the whole input at once.
 - At the start of a conversation, run `xholic events updates` to see what happened since the last check.
+- When the user asks what to post or do today, or for today's plan or strategy, start with `xholic today plan`: one call returns everything a plan needs (what happened, recent posts against their normal, what's working, the niche, who to reply to, the queue and what's ready). It's data, not a plan: decide what matters, and dig deeper with the commands each section names.
 - When the user wants something done later ("post something like this Thursday", a test, a plan), save it with `xholic notes add --title "<what>" --due <YYYY-MM-DD>` (add `--posts <url>` for the post it's about). Xholic turns it into drafts when it's due and records how the post did. `xholic lessons list` shows what has worked for the account by format: use it as evidence, never as rules. When you write a post from a note, pass `--note-id <id>` to `drafts save` or `posts schedule` so the note closes and never writes a duplicate.
 - Exit codes: 0 ok, 1 error, 2 confirmation needed, 3 auth (run `xholic login`), 4 rate limited (wait the printed seconds).
 - `--dry-run` on any change shows what would happen without doing it.

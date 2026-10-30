@@ -10,18 +10,22 @@ Use when they want several post ideas or don't know what to post today. Not for 
 
 ## Steps
 
-1. Posts working around them this week.
+1. Everything for today in one call: recent posts against their normal, what's working, the niche, who to reply to, the queue.
+   ```sh
+   xholic today plan
+   ```
+2. Posts working around them this week.
    ```sh
    xholic niche now --kind proven --limit 10
    ```
-2. Get material in the user's voice (proven posts, their winners, saves).
+3. Get material in the user's voice (proven posts, their winners, saves).
    ```sh
    xholic context writing-kit --topic "<subject of each pick>"
    ```
-3. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
-4. Check every draft before showing it; fix what it flags.
+4. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
+5. Check every draft before showing it; fix what it flags.
    ```sh
    xholic drafts check --text "<post>" --source-text "<post it was built from>"
    ```
-5. Offer three ideas, each from a different real post.
-6. Only when the user says so: save it as a draft (`xholic drafts save --text ...`) or schedule it (`xholic posts schedule --text ... --scheduled-at 2026-11-03T09:00 --timezone <their tz> --idempotency-key <unique>`). A draft is not a post.
+6. Offer three ideas, each from a different real post.
+7. Only when the user says so: save it as a draft (`xholic drafts save --text ...`) or schedule it (`xholic posts schedule --text ... --scheduled-at 2026-11-03T09:00 --timezone <their tz> --idempotency-key <unique>`). A draft is not a post.
