@@ -35,6 +35,6 @@ Never add numbers, studies or claims a card doesn't have. A post teaches the car
 3. Let them pick cards; write one teaching post per card yourself, citing only the card's evidence.
 4. Check each draft.
    ```sh
-   xholic drafts check --text "<post>"
+   xholic drafts check --text "<post>" --source-post-ids "<source post id>"
    ```
 5. Only when the user says so: save it as a draft (`xholic drafts save --text ...`) or schedule it (`xholic posts schedule --text ... --scheduled-at 2026-11-03T09:00 --timezone <their tz> --idempotency-key <unique>`). A draft is not a post.

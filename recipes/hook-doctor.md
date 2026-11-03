@@ -28,5 +28,5 @@ You fix the first line of a post: on X a stranger decides in the first line whet
 2. Judge the opening against the stranger test, then write five new openings yourself, each a different approach. Keep the rest of the post.
 3. Check the best two or three.
    ```sh
-   xholic drafts check --text "<post>"
+   xholic drafts check --text "<post>" --source-post-ids "<source post id>"
    ```

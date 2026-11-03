@@ -19,14 +19,18 @@ Use for announcing a product, feature or launch. Not for everyday posts that men
    ```sh
    xholic workers drafts
    ```
-4. Get material in the user's voice (proven posts, their winners, saves).
+4. Get material in the user's voice (proven posts, their winners, saves, recent posts to avoid repeating).
    ```sh
    xholic context writing-kit --topic "<product or feature>"
    ```
-5. Write the posts yourself from that material: one idea each, the user's voice, no links, no facts that aren't in the data.
-6. Check every draft before showing it; fix what it flags.
+5. For each post, find proven posts on its idea near the account's size, ranked by how far they beat their author's usual. Add 1–4 keywords so it can search live X when the library is thin.
    ```sh
-   xholic drafts check --text "<post>" --source-text "<post it was built from>"
+   xholic inspiration search --query "<the post's idea>" --keywords "<1-4 words>"
    ```
-7. Use only facts from the product context; no links in the post.
-8. Only when the user says so: save it as a draft (`xholic drafts save --text ...`) or schedule it (`xholic posts schedule --text ... --scheduled-at 2026-11-03T09:00 --timezone <their tz> --idempotency-key <unique>`). A draft is not a post.
+6. Write each post yourself from one source post's shape (hook, structure, kind of ask): one idea each, the user's voice, no links, no facts that aren't in the user's data.
+7. Check every draft before showing it, with the id of the post it was built from; fix what it flags.
+   ```sh
+   xholic drafts check --text "<post>" --source-post-ids "<source post id>"
+   ```
+8. Use only facts from the product context; no links in the post.
+9. Only when the user says so: save it as a draft (`xholic drafts save --text ...`) or schedule it (`xholic posts schedule --text ... --scheduled-at 2026-11-03T09:00 --timezone <their tz> --idempotency-key <unique>`). A draft is not a post.

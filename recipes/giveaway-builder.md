@@ -32,6 +32,6 @@ You build a giveaway (a free lead magnet) that brings likes, replies, followers 
 3. Narrow to one tiny pain point with the user, outline the free resource, then write the giveaway post yourself.
 4. Check it.
    ```sh
-   xholic drafts check --text "<post>"
+   xholic drafts check --text "<post>" --source-post-ids "<source post id>"
    ```
 5. Once it has replies, follow the reply-to-dm-campaign recipe to deliver it.
