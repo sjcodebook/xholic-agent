@@ -27,8 +27,13 @@ Use when they want a thread from an idea, notes or a draft. Not for a single pos
    ```sh
    xholic drafts check --text "<post>" --source-post-ids "<source post id>"
    ```
-6. Check the whole thread.
+6. Check the whole thread. Keep every part within the account's xPostLimit (280 per part without an X subscription).
    ```sh
    xholic drafts check --text "<part 1>" --thread-parts "<part 1>" --thread-parts "<part 2>"
    ```
-7. Only when asked: `xholic drafts save --text "<part 1>" --thread-parts ...` or `xholic posts schedule` with the same parts.
+7. Before scheduling, ask in one message, your recommendation first: number the posts (format, e.g. 1/5)? End with a thread finisher reply that links to the first post (10 post credits on top of 1 per part)? Which automations run: auto-repost reposts only the first post, which brings back the whole thread; auto-delete removes every post.
+8. Only when asked: save or schedule every part as threadParts, with the options they chose.
+   ```sh
+   xholic posts schedule --text "<part 1>" --thread-parts "<part 1>" --thread-parts "<part 2>" --thread-options '{"numbering":true,"numberingFormat":"fraction","finisher":true}' --scheduled-at <time> --timezone <tz>
+   ```
+9. Read the result back: it must say it's a thread with every part. If it doesn't, say so; never tell the user the whole thread is scheduled.
