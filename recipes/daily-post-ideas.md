@@ -6,34 +6,38 @@ What to post today, drafted and ready to schedule.
 
 Use when they want several post ideas or don't know what to post today. Not for one specific post they describe (write it directly), or for rewriting their text.
 
-**The user might say:** "Give me three post ideas for today, each written in my voice from a different real post that's working around me (let Xholic pick them), as three options on one draft card."
+**The user might say:** "Give me three post ideas for today, each written in my voice from a different real post that's working around me (let Xholic pick them), as three options on one draft card. Start from today's slots in my week plan if there is one, so the ideas fit its sub-topics."
 
 ## Steps
 
-1. Everything for today in one call: recent posts against their normal, what's working, the niche, who to reply to, the queue.
+1. Today's slots in the week's plan (sub-topic, why, draft): the ideas should fit them.
+   ```sh
+   xholic plan week --today true
+   ```
+2. Everything for today in one call: recent posts against their normal, what's working, the niche, who to reply to, the queue.
    ```sh
    xholic today plan
    ```
-2. Posts working around them this week.
+3. Posts working around them this week.
    ```sh
    xholic niche now --kind proven --limit 10
    ```
-3. Check what the user's Workers already wrote: ready-made drafts, free to use.
+4. Check what the user's Workers already wrote: ready-made drafts, free to use.
    ```sh
    xholic workers drafts
    ```
-4. Get material in the user's voice (proven posts, their winners, saves, recent posts to avoid repeating).
+5. Get material in the user's voice (proven posts, their winners, saves, recent posts to avoid repeating).
    ```sh
    xholic context writing-kit --topic "<subject of each pick>"
    ```
-5. For each post, find proven posts on its idea near the account's size, ranked by how far they beat their author's usual. Add 1–4 keywords so it can search live X when the library is thin.
+6. For each post, find proven posts on its idea near the account's size, ranked by how far they beat their author's usual. Add 1–4 keywords so it can search live X when the library is thin.
    ```sh
    xholic inspiration search --query "<the post's idea>" --keywords "<1-4 words>"
    ```
-6. Write each post yourself from one source post's shape (hook, structure, kind of ask): one idea each, the user's voice, no links, no facts that aren't in the user's data.
-7. Check every draft before showing it, with the id of the post it was built from; fix what it flags.
+7. Write each post yourself from one source post's shape (hook, structure, kind of ask): one idea each, the user's voice, no links, no facts that aren't in the user's data.
+8. Check every draft before showing it, with the id of the post it was built from; fix what it flags.
    ```sh
    xholic drafts check --text "<post>" --source-post-ids "<source post id>"
    ```
-8. Offer three ideas, each from a different real post.
-9. Only when the user says so: save it as a draft (`xholic drafts save --text ...`) or schedule it (`xholic posts schedule --text ... --scheduled-at 2026-11-03T09:00 --timezone <their tz> --idempotency-key <unique>`). A draft is not a post.
+9. Offer three ideas, each from a different real post.
+10. Only when the user says so: save it as a draft (`xholic drafts save --text ...`) or schedule it (`xholic posts schedule --text ... --scheduled-at 2026-11-03T09:00 --timezone <their tz> --idempotency-key <unique>`). A draft is not a post.

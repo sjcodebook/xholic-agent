@@ -6,40 +6,40 @@ A week of drafts, spread across the week, one approval each.
 
 Use for a week or more of posts planned day by day. Not for today's ideas or one post.
 
-**The user might say:** "Plan my next seven days of posts from my context, analytics, and queue. Draft each day as its own post, one option per day titled with the day, and ask before scheduling anything."
+**The user might say:** "Plan my next seven days of posts from Xholic's plan for this week, my analytics and my queue. Draft each slot as its own post, one option per slot titled with the day, save it into the plan, and ask before scheduling anything."
 
 ## Steps
 
-1. What worked lately.
+1. Xholic's plan for this week: each slot's day, time, sub-topic, why and draft, and the week's test. Work from it; don't build a separate list.
    ```sh
-   xholic insights whats-working --range 30d
+   xholic plan week
    ```
-2. What's already queued.
+2. What's already queued, so nothing doubles up.
    ```sh
    xholic queue list --view queued
    ```
-3. Good times for the week.
-   ```sh
-   xholic scheduler best-times --slot-count 7
-   ```
-4. Check what the user's Workers already wrote: ready-made drafts, free to use.
+3. Check what the user's Workers already wrote: ready-made drafts, free to use.
    ```sh
    xholic workers drafts
    ```
-5. Get material in the user's voice (proven posts, their winners, saves, recent posts to avoid repeating).
+4. Get material in the user's voice (proven posts, their winners, saves, recent posts to avoid repeating).
    ```sh
-   xholic context writing-kit --topic "<each day's subject>"
+   xholic context writing-kit --topic "<each slot's sub-topic>"
    ```
-6. For each post, find proven posts on its idea near the account's size, ranked by how far they beat their author's usual. Add 1–4 keywords so it can search live X when the library is thin.
+5. For each post, find proven posts on its idea near the account's size, ranked by how far they beat their author's usual. Add 1–4 keywords so it can search live X when the library is thin.
    ```sh
    xholic inspiration search --query "<the post's idea>" --keywords "<1-4 words>"
    ```
-7. Write each post yourself from one source post's shape (hook, structure, kind of ask): one idea each, the user's voice, no links, no facts that aren't in the user's data.
-8. Check every draft before showing it, with the id of the post it was built from; fix what it flags.
+6. Write each post yourself from one source post's shape (hook, structure, kind of ask): one idea each, the user's voice, no links, no facts that aren't in the user's data.
+7. Check every draft before showing it, with the id of the post it was built from; fix what it flags.
    ```sh
    xholic drafts check --text "<post>" --source-post-ids "<source post id>"
    ```
-9. Show one post per day, titled with the day. Ask before scheduling anything; then schedule each approved post with its own idempotency key.
+8. Save each slot's draft into the plan.
    ```sh
-   xholic posts schedule --text "<post>" --scheduled-at <day>T09:00 --timezone <tz> --idempotency-key <unique>
+   xholic plan update-slot --slot-id <slot id> --text "<post>"
+   ```
+9. Show one post per slot, titled with its day. Approve each one only after the user says yes to that post (never several on one yes); test slots start the week's test.
+   ```sh
+   xholic plan approve-slot --slot-id <slot id>
    ```
