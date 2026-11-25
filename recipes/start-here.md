@@ -2,7 +2,7 @@
 
 # Start Here
 
-Set Xholic up in a short chat: who you are, your niche, picks, a goal and your taste.
+Set Xholic up in a short chat: who you are, your niche and voice, picks, a goal, posting times and your taste.
 
 Use when they're new, ask how to set Xholic up or get started, or when the brief's setup isn't done. Not for a check-in on how the account is doing (growth-check-in).
 
@@ -14,20 +14,22 @@ Follow this guide step by step.
 
 You walk a new user through setting Xholic up, as a friendly conversation in plain English: one step at a time, never a form. Nothing here posts anything.
 
-1. Call `xholic mentor brief` and `xholic me get` together. session.setup lists the steps with done or todo, why each matters and where it lives; work only on the missing ones, in order. If setup is already complete, say so in one line ("You're all set up") and go straight to step 8, this week's plan, instead of repeating any step.
+1. Call `xholic mentor brief` and `xholic me get` together. session.setup lists the steps with done or todo, why each matters and where it lives; work only on the missing ones, in order, plus steps 5 and 8 when they haven't been settled. If setup is already complete, say so in one line ("You're all set up") and go straight to step 10, this week's plan, instead of repeating any step.
 2. Say what Xholic is in three short lines: it learns their niche, voice and what already works for them and the creators they pick; it plans each week of posts with them, each with a why and one small test; nothing is posted without their yes.
 3. Say how it learns in one line: their replies, reposts, quotes, saves, the drafts they edit or skip, how their posts do, and their picks (on a phone, they can paste any post link into the chat and say "save").
-4. About you and niche: ask them to tell you, in their own words, who they are, what they post about and who it's for (a brain dump is fine). Then save it directly, without waiting for a yes: `xholic context update` with aboutYou in their first-person words, selectedTopics and targetAudience when they named them; and the matching `xholic` command "subtopics.save" with "add" for the sub-niches they named (active at once) and "suggest" for 4 to 6 sub-topics you expand their niche into (they stay suggested until they say yes). Tell them exactly what you saved and that they can undo it (each result carries undo with the previous values; send it back with the same action).
-5. Picks: if they have none, suggest two or three creators one size band ahead of them in their niche (the matching `xholic` command "spotlight.list" for who Xholic already follows for them, the matching `xholic` command "settings.search_style_creators" for names they mention) and add the ones they choose with the matching `xholic` command "settings.add_style_creator". Picks shape the plan most while they're early.
-6. Goal: offer the realistic goal in session.proposeGoal as a question; set it with the matching `xholic` command "mentor.set_goal" only after a yes.
-7. Taste: offer the taste check (the matching `xholic` command "taste.check" shows posts, the matching `xholic` command "taste.answer" saves the ones they'd love to have written). If it isn't available, ask them to paste two or three posts they wish they'd written and save each with the matching `xholic` command "library.save_by_url".
-8. First post: rebuild this week's plan so it follows what they just told you (the matching `xholic` command "plan.rebuild"; free, nothing posted), show it, and offer to write one slot with them; approve it only when they say yes to that post (the matching `xholic` command "plan.approve_slot").
-9. The Chrome extension is optional: mention it once, only if they ask how else Xholic learns.
+4. About you and niche: ask them to tell you, in their own words, who they are, what they post about and who it's for (a brain dump is fine). Then save it directly, without waiting for a yes: `xholic context update` with aboutYou in their first-person words, selectedTopics and targetAudience when they named them; and the matching `xholic` command "subtopics.save" with "add" for the sub-niches they named (active at once) and "suggest" for 4 to 6 sub-topics you expand their niche into (they stay suggested until they say yes). Tell them exactly what you saved and that they can undo it (each result carries undo with the previous values; send it back with the same action). If the saved context still describes an old direction (a different niche, audience or product pitch), say what you'd replace and replace it only after a yes.
+5. Voice and rules: draft their tones (only the fixed options `xholic context update` accepts; keep the ones that fit) and 4 to 7 short writing rules every draft will follow, built from what they said and how their best posts read (for example: back claims with their own numbers, what line 1 must do, no hashtags, how to end, never pitch their product unless it's the story). Show the draft and save it with `xholic context update` tones and accountRules only after a yes. Rules are about voice and honesty, not post types: don't ban formats before the plan has tested them.
+6. Picks: if they have none, suggest two or three creators one size band ahead of them in their niche (the matching `xholic` command "spotlight.list" for who Xholic already follows for them, the matching `xholic` command "settings.search_style_creators" for names they mention) and add the ones they choose with the matching `xholic` command "settings.add_style_creator". Then study the picks with the matching `xholic` command "picks.playbook" (and the matching `xholic` command "mentor.riser" with the handle for a pick in a growth jump; skip it when it says the account isn't flagged as rising): say in a few lines what wins and what flops for each, judged against their own usual, which pick to borrow formats from and which hooks from, and where the pick's habits differ from the user's (cadence, replies, media, size). Picks shape the plan most while they're early. A pick without a playbook is still collecting its best posts: say so and move on.
+7. Goal: offer the realistic goal in session.proposeGoal as a question, with its commitments (original posts a day, replies a day, and anything else such as videos or threads a week). Ask what they'll really do and change the commitments to match their answer, then set it with the matching `xholic` command "mentor.set_goal" (metric, target, commitments) only after a yes.
+8. Posting times: read the matching `xholic` command "scheduler.list_slots", "scheduler.get_settings" (timezone and default auto-repost) and "scheduler.best_times". Propose weekly slots that match the goal's posts a day: one prime slot a day in their best window (where their picks' winning hours land too, when they overlap), a second slot that can test another window, and odd minutes (9:27, not 9:30). For an audience in two regions, suggest one auto-repost per post, timed to land in the other region's waking hours. Check every post and repost in the week together and keep them at least 3 hours apart; shift the slots or the repost delay until they are. Show the week as a table and replace the slots with the matching `xholic` command "scheduler.replace_slots" (the whole list) only after a yes. Set the repost delay they agreed to with `xholic scheduler update-settings` only after a yes; it's also in Settings → General → Default post settings.
+9. Taste: offer the taste check (the matching `xholic` command "taste.check" shows posts, the matching `xholic` command "taste.answer" saves the ones they'd love to have written). If it isn't available, ask them to paste two or three posts they wish they'd written and save each with the matching `xholic` command "library.save_by_url".
+10. First post: rebuild this week's plan so it follows what they just told you (the matching `xholic` command "plan.rebuild"; free, nothing posted), show it with the mode's line, and flag anything that doesn't match what they said (a language they don't post in, a format their rules rule out). Tell them their own posts and videos can replace a planned slot any time. Offer to write one slot with them and save it to its slot (the matching `xholic` command "plan.update_slot"). Approve it only when they say yes to that post (`xholic plan approve-slot`).
+11. The Chrome extension is optional: mention it once, only if they ask how else Xholic learns.
 After each step, say in one line what's left ("3 of 6 done"), and stop when they want to; the brief offers the rest next session. End with a short list.
 
 ## Calls it uses
 
-1. What's set up and what's missing: session.setup lists each step with why it matters and where it lives. Work only on the missing ones, in order. If setup is already complete, say so in one line ("You're all set up") and go straight to this week's plan instead of repeating any step.
+1. What's set up and what's missing: session.setup lists each step with why it matters and where it lives. Work only on the missing ones, in order, plus voice and posting times when they haven't been settled. If setup is already complete, say so in one line ("You're all set up") and go straight to this week's plan instead of repeating any step.
    ```sh
    xholic mentor brief
    ```
@@ -36,7 +38,7 @@ After each step, say in one line what's left ("3 of 6 done"), and stop when they
    xholic me get
    ```
 3. Say what Xholic is in three lines (it learns their niche, voice and what works for them and their picks; it plans each week of posts with a why and one small test; nothing posts without their yes), then how it learns: replies, reposts, quotes, saves, edits, results and picks.
-4. Ask who they are, what they post about and who it's for. Save what they say directly and tell them what you saved and that it can be undone (send the result's undo back with the same action).
+4. Ask who they are, what they post about and who it's for. Save what they say directly and tell them what you saved and that it can be undone (send the result's undo back with the same action). If the saved context still describes an old direction, say what you'd replace and replace it only after a yes.
    ```sh
    xholic context update --about-you "<their words, first person>" --selected-topics "<topic>" --target-audience "<who it is for>"
    ```
@@ -44,24 +46,56 @@ After each step, say in one line what's left ("3 of 6 done"), and stop when they
    ```sh
    xholic subtopics save --json '{"add":[{"name":"<sub-niche they named>"}],"suggest":[{"name":"<your expansion>"}]}'
    ```
-6. No picks yet: suggest two or three creators one size band ahead in their niche and add the ones they choose.
+6. Voice and rules: draft their tones (only the fixed options the action lists) and 4 to 7 short writing rules every draft follows, from what they said and how their best posts read (own numbers behind claims, what line 1 must do, how to end, no pitching unless it's the story). Save only after a yes. Rules cover voice and honesty, not post types: don't ban formats before the plan has tested them.
+   ```sh
+   xholic context update --json '{"tones":["<tone>"],"accountRules":"<one rule per line>"}'
+   ```
+7. No picks yet: suggest two or three creators one size band ahead in their niche and add the ones they choose.
    ```sh
    xholic settings add-style-creator --creator-id <creator id>
    ```
-7. Offer the brief's proposeGoal as a question; set it only after a yes.
+8. Study the picks: what wins and what flops for each against their own usual, which pick to borrow formats from and which hooks from, and where their habits differ from the user's (cadence, replies, media, size). A pick without a playbook is still collecting posts.
    ```sh
-   xholic mentor set-goal --metric followers --target <number>
+   xholic picks playbook
    ```
-8. Offer the taste check (`taste.check`, then `taste.answer`), or ask for two or three post links they wish they'd written and save each.
+9. For a pick in a growth jump, how the jump happened. Skip it when it says the account isn't flagged as rising.
+   ```sh
+   xholic mentor riser --handle "<pick handle>"
+   ```
+10. Offer the brief's proposeGoal as a question with its commitments (posts a day, replies a day, anything else such as videos a week). Change the commitments to what they say they'll really do, and set it only after a yes.
+   ```sh
+   xholic mentor set-goal --json '{"metric":"followers","target":<number>,"commitments":{"postsPerDay":<n>,"repliesPerDay":<n>,"other":["<e.g. 2 videos a week>"]}}'
+   ```
+11. Posting times: their slots, timezone and default auto-repost, and their best windows.
+   ```sh
+   xholic scheduler list-slots
+   ```
+12. Default automations, auto-repost included.
+   ```sh
+   xholic scheduler get-settings
+   ```
+13. When their audience engages.
+   ```sh
+   xholic scheduler best-times --slot-count 14
+   ```
+14. Propose weekly slots matching the goal's posts a day: a prime slot in their best window (where the picks' winning hours land too, when they overlap), a second slot that can test another window, odd minutes (9:27, not 9:30). For an audience in two regions, one auto-repost per post timed for the other region's waking hours. Check every post and repost in the week together and keep them at least 3 hours apart; shift the slots or the repost delay until they are. Show the week as a table and replace the slots only after a yes (send the whole list).
+   ```sh
+   xholic scheduler replace-slots --json '{"slots":[{"weekday":1,"timeOfDayMinutes":1287,"timezone":"<their timezone>"}]}'
+   ```
+15. Set the repost delay they agreed to, only after a yes. It needs the connection's posting permission: if the result asks for it, give the user its link and try again once they allow it.
+   ```sh
+   xholic scheduler update-settings --json '{"automation":{"autoRepost":{"enabled":true,"repostDelaysMinutes":[<minutes>]}}}'
+   ```
+16. Offer the taste check (`taste.check`, then `taste.answer`), or ask for two or three post links they wish they'd written and save each.
    ```sh
    xholic library save-by-url --url <post link>
    ```
-9. Rebuild this week's plan so it follows what they just told you (free: no AI credits, nothing posted), show it, and approve one post only after the user says yes to it.
+17. Rebuild this week's plan so it follows what they just told you (free: no AI credits, nothing posted). Show it with the mode's line and flag anything that doesn't match what they said (a language they don't post in, a format their rules rule out). Tell them their own posts and videos can replace a planned slot any time.
    ```sh
    xholic plan rebuild
    ```
-10. Approve a post only after the user says yes to that post.
+18. Approve a post only after the user says yes to that post.
    ```sh
    xholic plan approve-slot --slot-id <slot id>
    ```
-11. After each step, say what's left ("3 of 6 done"). The Chrome extension is optional; mention it only if they ask.
+19. After each step, say what's left ("3 of 6 done"). The Chrome extension is optional; mention it only if they ask.
